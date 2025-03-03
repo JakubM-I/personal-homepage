@@ -1,3 +1,5 @@
-export const theme = {
+import { Theme } from "styled-components";
+
+export const theme: Theme = {
 
 };
