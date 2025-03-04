@@ -3,15 +3,13 @@ import "styled-components";
 declare module "styled-components" {
     export interface Theme {
         colors: {
-            primary: string;
-            secondary: string;
-            background: string;
-            text: string;
-            accent: string;
-        };
-        fonts: {
-            primary: string;
-            secondary: string;
+            mainBlueLM: string;
+            mainBlueDM: string;
+            white: string;
+            black: string;
+            textSecondary: string;
+            bgLightMode: string;
+            lightGrey: string;
         };
     }
 }
