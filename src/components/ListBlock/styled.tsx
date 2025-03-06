@@ -11,7 +11,7 @@ export const StyledListBlock = styled.div`
 
 export const StyledDivider = styled.hr`
     border-top: 1px solid ${({ theme }) => theme.colors.bgNeutral};
-    margin-block-start: 15px;
+    margin-block: 15px 32px;
 `
 
 
