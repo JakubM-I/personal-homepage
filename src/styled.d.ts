@@ -10,6 +10,7 @@ declare module "styled-components" {
             textSecondary: string;
             bgLightMode: string;
             lightGrey: string;
+            bgNeutral: string;
         };
     }
 }

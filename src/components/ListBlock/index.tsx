@@ -1,10 +1,11 @@
 import BlockTitle from "../../common/BlockTitle";
-import { StyledListBlock } from "./styled";
+import { StyledDivider, StyledListBlock } from "./styled";
 
-const ListBlock = () => {
+const ListBlock = ({ title }: { title: string }) => {
     return (
         <StyledListBlock>
-            <BlockTitle title="List" />
+            <BlockTitle title={title} />
+            <StyledDivider />
         </StyledListBlock>
 
     )

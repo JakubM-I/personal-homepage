@@ -7,3 +7,9 @@ export const StyledListBlock = styled.div`
     box-shadow: 0px 16px 58px 0px #090A3308;
     box-shadow: 0px -2px 50px 0px #090A3305;
 `
+
+export const StyledDivider = styled.hr`
+    border-top: 1px solid ${({ theme }) => theme.colors.bgNeutral};
+    margin-block-start: 15px;
+`
+
