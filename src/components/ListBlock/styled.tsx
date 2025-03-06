@@ -14,3 +14,25 @@ export const StyledDivider = styled.hr`
     margin-block-start: 15px;
 `
 
+
+export const StyledList = styled.ul`
+    padding: 0;
+    padding-inline-start: 22px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(283px, 1fr));
+    gap: 10px;
+`
+
+export const StyledListitem = styled.li`
+    font-size: 18px;
+    color: ${({ theme }) => theme.colors.textSecondary};
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 2px;
+
+    &::marker{
+        color: ${({ theme }) => theme.colors.mainBlueLM};
+        font-size: 21px;
+    }
+`
