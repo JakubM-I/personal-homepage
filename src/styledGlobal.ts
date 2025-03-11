@@ -11,7 +11,7 @@ const StyledGlobal = createGlobalStyle`
     }
 
     body{
-        background: ${({ theme }) => theme.colors.bgLightMode};
+        background: ${({ theme }) => theme.colors.mainBg};
     }
 `
 
