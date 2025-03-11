@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const StyledListBlock = styled.div`
     width: 100%;
     padding: 32px;
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.blockBg};
     box-shadow: 0px 16px 58px 0px #090A3308;
     box-shadow: 0px -2px 50px 0px #090A3305;
     margin-block-end: 72px;
 `
 
 export const StyledDivider = styled.hr`
-    border-top: 1px solid ${({ theme }) => theme.colors.bgNeutral};
+    border-top: 1px solid ${({ theme }) => theme.colors.divider};
     margin-block: 15px 32px;
 `
 
@@ -32,7 +32,7 @@ export const StyledListitem = styled.li`
     letter-spacing: 2px;
 
     &::marker{
-        color: ${({ theme }) => theme.colors.mainBlueLM};
+        color: ${({ theme }) => theme.colors.mainBlue};
         font-size: 21px;
     }
 `
