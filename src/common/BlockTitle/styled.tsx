@@ -7,4 +7,5 @@ export const StyledTitle = styled.h2`
     line-height: 1;
     letter-spacing: 2px;
     margin: 0;
+    color: ${({ theme }) => theme.colors.textBasic};
 `

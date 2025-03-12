@@ -1,11 +1,18 @@
+import { StyledHeroDescription, StyledHeroIntro, StyledHeroSection, StyledHeroTitle } from "./styled";
+
 const HeroSection: React.FC = () => {
 
     return (
-        <div>
-            <h1>Personal HomePage</h1>
-        </div>
+        <StyledHeroSection>
+            <img src="" alt="" />
+            <div>
+                <StyledHeroIntro>This is</StyledHeroIntro>
+                <StyledHeroTitle>Jakub Musiałowski</StyledHeroTitle>
+                <StyledHeroDescription>I'm a Frontend Developer and i will do page for you :)</StyledHeroDescription>
+                <button>Hire me</button>
+            </div>
+        </StyledHeroSection>
 
     )
 };
-
 export default HeroSection;
