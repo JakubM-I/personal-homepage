@@ -2,12 +2,24 @@ import styled from "styled-components";
 
 export const StyledHeroSection = styled.div`
     width: 100%;
-`
-export const StyledHeroContent = styled.div`
+    position: relative;
     display: flex;
-    flex-direction: c;
+    gap: 72px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block-start: 89px;
+    margin-block-end: 72px;
 `
 
+export const StyledHeroImage = styled.img`
+    width: min(100%, 398px);
+    height: auto;
+    aspect-ratio: 1/1;
+`
+
+export const StyledHeroContent = styled.div`
+    display: flex;
+`
 export const StyledHeroIntro = styled.p`
     margin-block: 0 12px;
     font-size: 12px;

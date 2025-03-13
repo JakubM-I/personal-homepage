@@ -1,10 +1,10 @@
-import { StyledHeroDescription, StyledHeroIntro, StyledHeroSection, StyledHeroTitle } from "./styled";
+import { StyledHeroDescription, StyledHeroImage, StyledHeroIntro, StyledHeroSection, StyledHeroTitle } from "./styled";
 
 const HeroSection: React.FC = () => {
 
     return (
         <StyledHeroSection>
-            <img src="" alt="" />
+            <StyledHeroImage src="" alt="" />
             <div>
                 <StyledHeroIntro>This is</StyledHeroIntro>
                 <StyledHeroTitle>Jakub Musiałowski</StyledHeroTitle>
