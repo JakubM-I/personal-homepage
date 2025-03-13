@@ -20,14 +20,7 @@ export const StyledHeroImage = styled.img`
 export const StyledHeroContent = styled.div`
     display: flex;
 `
-export const StyledHeroIntro = styled.p`
-    margin-block: 0 12px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.textSecondary};
-`
+
 
 export const StyledHeroTitle = styled.h1`
     margin-block: 0 35px;
