@@ -55,10 +55,9 @@ export const StyledButton = styled.button`
     gap: 16px;
     background: ${({ theme }) => theme.colors.mainBlue};
     color: ${({ theme }) => theme.colors.buttonTxt};
-    transition: color 550ms ease-in, background 550ms ease-in;
+    transition: box-shadow 350ms ease-in;
 
     &:hover {
-        color: ${({ theme }) => theme.colors.mainBlue};
-        background: ${({ theme }) => theme.colors.buttonTxt};
+        box-shadow: -2px -2px 0px 0px #8CC2FF, 2px 2px 0px 0px #8CC2FF, -2px 2px 0px 0px #8CC2FF, 2px -2px 0px 0px #8CC2FF;
     }
 `
