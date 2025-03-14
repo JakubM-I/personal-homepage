@@ -1,12 +1,12 @@
 import { StyledIntroText } from "../../common/styled/styled"
-import { StyledFooter, StyledFooterEmail, StyledLink, StyledLogoWrapper } from "./styled";
+import { StyledFooter, StyledFooterEmail, StyledFooterText, StyledLink, StyledLogoWrapper } from "./styled";
 
 const Footer: React.FC = () => {
     return (
         <StyledFooter>
             <StyledIntroText>Let's talk</StyledIntroText>
-            <StyledFooterEmail>mds@mds.biz.pl</StyledFooterEmail>
-            <p>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to contact me</p>
+            <StyledFooterEmail href="mailto: mds@mds.biz.pl">mds@mds.biz.pl</StyledFooterEmail>
+            <StyledFooterText>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to contact me</StyledFooterText>
             <StyledLogoWrapper>
                 <StyledLink href="">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
