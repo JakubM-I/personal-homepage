@@ -18,3 +18,20 @@ export const StyledFooterEmail = styled.p`
     letter-spacing: 2px;
     color: ${({ theme }) => theme.colors.textBasic};
 `
+
+export const StyledLogoWrapper = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+`
+
+export const StyledLink = styled.a`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.textBasic};
+    transition: color 0.3s ease-in;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.mainBlue};
+    }
+`
