@@ -20,7 +20,9 @@ export const lightTheme: Theme = {
         mainBlue: colors.mainBlueLM,
         divider: colors.bgNeutral,
         textBasic: colors.black,
-        textSecondary: colors.darkGrey
+        textSecondary: colors.darkGrey,
+        buttonTxt: colors.white,
+        borders: colors.bgNeutral
     }
 };
 
@@ -32,5 +34,7 @@ export const darkTheme: Theme = {
         divider: colors.semiGrey,
         textBasic: colors.white,
         textSecondary: colors.white,
+        buttonTxt: colors.white,
+        borders: colors.semiGrey
     }
 };
