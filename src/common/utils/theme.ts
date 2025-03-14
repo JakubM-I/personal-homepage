@@ -10,7 +10,9 @@ export const colors = {
     darkGrey: "#6E7E91",
     bgNeutral: "#D1D5DA4D",
     semiDark: "#363636B8",
-    semiGrey: "#D1D5DA1A"
+    semiGrey: "#D1D5DA1A",
+    anakiwa: "#8CC2FF",
+    shipCove: "#6D93BE"
 }
 
 export const lightTheme: Theme = {
@@ -22,7 +24,8 @@ export const lightTheme: Theme = {
         textBasic: colors.black,
         textSecondary: colors.darkGrey,
         buttonTxt: colors.white,
-        borders: colors.bgNeutral
+        borders: colors.bgNeutral,
+        shadow: colors.anakiwa
     }
 };
 
@@ -35,6 +38,7 @@ export const darkTheme: Theme = {
         textBasic: colors.white,
         textSecondary: colors.white,
         buttonTxt: colors.white,
-        borders: colors.semiGrey
+        borders: colors.semiGrey,
+        shadow: colors.shipCove
     }
 };
