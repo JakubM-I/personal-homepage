@@ -7,6 +7,7 @@ import { lightTheme, darkTheme } from "./common/utils/theme"
 import StyledGlobal from "./styledGlobal"
 import HeroSection from "./components/HeroSectiion"
 import Footer from "./components/Footer"
+import RepoList from "./components/RepoList"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <HeroSection />
         <ListBlock title="My skillset includes 🛠️" content={skillList} />
         <ListBlock title="What I want to learn next 🚀" content={wantToLernList} />
+        <RepoList />
         <Footer />
       </StyledAppWrapper>
     </ThemeProvider>
