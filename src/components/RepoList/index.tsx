@@ -1,5 +1,5 @@
 import BlockTitle from "../../common/BlockTitle"
-import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoTitle, StyledSubtitle } from "./styled";
+import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoList, StyledRepoTitle, StyledSubtitle } from "./styled";
 
 const RepoList: React.FC = () => {
     return (
@@ -11,14 +11,20 @@ const RepoList: React.FC = () => {
             </StyledLogoWrapper>
             <BlockTitle title="Portfolio" />
             <StyledSubtitle>My recent projects</StyledSubtitle>
-            <div>
+            <StyledRepoList>
                 <StyledRepoItem>
                     <StyledRepoTitle>Movies Browser</StyledRepoTitle>
                     <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
                     <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
                     <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
                 </StyledRepoItem>
-            </div>
+                <StyledRepoItem>
+                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
+                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
+                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
+                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
+                </StyledRepoItem>
+            </StyledRepoList>
         </StyledPortfolio>
     )
 };

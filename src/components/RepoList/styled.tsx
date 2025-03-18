@@ -22,9 +22,17 @@ export const StyledSubtitle = styled.p`
     color: ${({ theme }) => theme.colors.baseText};
     margin: 8px 0 24px 0;
 `
+
+export const StyledRepoList = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+`
 export const StyledRepoItem = styled.div`
     background: ${({ theme }) => theme.colors.blockBg};
     border: 6px solid ${({ theme }) => theme.colors.borders};
+    padding: 24px;
 `
 
 export const StyledRepoTitle = styled.h3`
