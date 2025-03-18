@@ -1,5 +1,5 @@
 import BlockTitle from "../../common/BlockTitle"
-import { StyledLogoWrapper, StyledPortfolio, StyledSubtitle } from "./styled";
+import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoTitle, StyledSubtitle } from "./styled";
 
 const RepoList: React.FC = () => {
     return (
@@ -12,7 +12,12 @@ const RepoList: React.FC = () => {
             <BlockTitle title="Portfolio" />
             <StyledSubtitle>My recent projects</StyledSubtitle>
             <div>
-                <p>Repo list</p>
+                <StyledRepoItem>
+                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
+                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
+                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
+                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
+                </StyledRepoItem>
             </div>
         </StyledPortfolio>
     )
