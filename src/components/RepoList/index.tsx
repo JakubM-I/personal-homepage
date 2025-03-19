@@ -24,6 +24,18 @@ const RepoList: React.FC = () => {
                     <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
                     <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
                 </StyledRepoItem>
+                <StyledRepoItem>
+                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
+                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
+                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
+                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
+                </StyledRepoItem>
+                <StyledRepoItem>
+                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
+                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
+                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
+                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
+                </StyledRepoItem>
             </StyledRepoList>
         </StyledPortfolio>
     )

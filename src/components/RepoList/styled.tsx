@@ -6,7 +6,7 @@ export const StyledPortfolio = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* gap: 8px;/ */
+    margin-block-end: 72px;
 `
 
 export const StyledLogoWrapper = styled.div`
@@ -15,7 +15,7 @@ export const StyledLogoWrapper = styled.div`
 `
 
 export const StyledSubtitle = styled.p`
-    font: 20px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 1px;
@@ -26,13 +26,13 @@ export const StyledSubtitle = styled.p`
 export const StyledRepoList = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(386px, 1fr));
+    gap: 30px;
 `
 export const StyledRepoItem = styled.div`
     background: ${({ theme }) => theme.colors.blockBg};
     border: 6px solid ${({ theme }) => theme.colors.borders};
-    padding: 24px;
+    padding: 42px;
 `
 
 export const StyledRepoTitle = styled.h3`
