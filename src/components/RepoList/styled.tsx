@@ -53,6 +53,22 @@ export const StyledRepoDescription = styled.p`
 `
 
 export const StyledRepoLink = styled.a`
+    text-decoration: none;
+    position: relative;
     color: ${({ theme }) => theme.colors.mainBlue};
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 25px;
+        width: 100%;
+        border-bottom: 1px solid ${({ theme }) => theme.colors.mainBlue};
+        transition: opacity 0.3s ease-in;
+        opacity: 0.2;
+    }
     
+    &:hover::after {
+        opacity: 0.8;
+    }
 `
