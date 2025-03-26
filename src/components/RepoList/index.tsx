@@ -17,7 +17,15 @@ const RepoList: React.FC = () => {
             <BlockTitle title="Portfolio" />
             <StyledSubtitle>My recent projects</StyledSubtitle>
             <StyledRepoList>
-                <StyledRepoItem>
+                {repos.map(repo => (
+                    <StyledRepoItem key={repo.id}>
+                        <StyledRepoTitle>{repo.name}</StyledRepoTitle>
+                        <StyledRepoDescription>{repo.description}</StyledRepoDescription>
+                        <StyledRepoDescription>Demo: <StyledRepoLink href="#">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
+                        <StyledRepoDescription>Code: <StyledRepoLink href="#">{repo.homepage}</StyledRepoLink></StyledRepoDescription>
+                    </StyledRepoItem>
+                ))}
+                {/* <StyledRepoItem>
                     <StyledRepoTitle>Movies Browser</StyledRepoTitle>
                     <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
                     <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
@@ -40,7 +48,7 @@ const RepoList: React.FC = () => {
                     <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
                     <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
                     <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
-                </StyledRepoItem>
+                </StyledRepoItem> */}
             </StyledRepoList>
         </StyledPortfolio>
     )

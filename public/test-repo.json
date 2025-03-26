@@ -4,27 +4,27 @@
         "name": "test-repo-1",
         "html_url": "https://github.com/test-repo-1",
         "description": "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-        "homeepage": "https://test-repo-1.com"
+        "homepage": "https://test-repo-1.com"
     },
     {
         "id": 2,
         "name": "test-repo-2",
         "html_url": "https://github.com/test-repo-2",
         "description": "Website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-        "homeepage": "https://test-repo-2.com"
+        "homepage": "https://test-repo-2.com"
     },
     {
         "id": 3,
         "name": "test-repo-3",
         "html_url": "https://github.com/test-repo-3",
         "description": "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-        "homeepage": "https://test-repo-3.com"
+        "homepage": "https://test-repo-3.com"
     },
     {
         "id": 4,
         "name": "test-repo-4",
         "html_url": "https://github.com/test-repo-4",
         "description": "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-        "homeepage": "https://test-repo-4.com"
+        "homepage": "https://test-repo-4.com"
     }
 ]
