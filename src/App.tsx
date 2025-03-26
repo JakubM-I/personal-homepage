@@ -8,8 +8,17 @@ import StyledGlobal from "./styledGlobal"
 import HeroSection from "./components/HeroSectiion"
 import Footer from "./components/Footer"
 import RepoList from "./components/RepoList"
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { loadRepos } from "./features/repoList/repoSlice"
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadRepos())
+  }, [])
+
 
   return (
     <ThemeProvider theme={lightTheme}>
