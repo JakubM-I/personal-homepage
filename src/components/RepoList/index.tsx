@@ -21,8 +21,8 @@ const RepoList: React.FC = () => {
                     <StyledRepoItem key={repo.id}>
                         <StyledRepoTitle>{repo.name}</StyledRepoTitle>
                         <StyledRepoDescription>{repo.description}</StyledRepoDescription>
-                        <StyledRepoDescription>Demo: <StyledRepoLink href="#">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
-                        <StyledRepoDescription>Code: <StyledRepoLink href="#">{repo.homepage}</StyledRepoLink></StyledRepoDescription>
+                        <StyledRepoDescription>Demo: <StyledRepoLink href={repo.homepage} target="_blank">{repo.homepage}</StyledRepoLink></StyledRepoDescription>
+                        <StyledRepoDescription>Code: <StyledRepoLink href={repo.html_url} target="_blank">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
                     </StyledRepoItem>
                 ))}
                 {/* <StyledRepoItem>
