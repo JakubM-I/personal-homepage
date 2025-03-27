@@ -1,5 +1,5 @@
 export const getRepoList = async () => {
-    const response = await fetch("http://localhost:5173/test-repo.json");
+    const response = await fetch("https://api.github.com/users/JakubM-I/repos");
     const repos = await response.json();
     return repos;
 }
