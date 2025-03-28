@@ -8,12 +8,14 @@ import StyledGlobal from "./styledGlobal"
 import HeroSection from "./components/HeroSectiion"
 import Footer from "./components/Footer"
 import RepoList from "./components/RepoList"
-import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useEffect } from "react";
 import { loadRepos } from "./features/repoList/repoSlice"
+import { isDarkModeSelector } from "./features/themeSwitch/themeSlice"
+import { useAppDispatch, useAppSelector } from "./hooks/reduxHooks"
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  const isDarkMode = useAppSelector(isDarkModeSelector);
 
   useEffect(() => {
     dispatch(loadRepos())
@@ -21,7 +23,7 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <StyledGlobal />
       <StyledAppWrapper>
         <HeroSection />
