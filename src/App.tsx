@@ -10,7 +10,7 @@ import Footer from "./components/Footer"
 import RepoList from "./components/RepoList"
 import { useEffect } from "react";
 import { loadRepos } from "./features/repoList/repoSlice"
-import { isDarkModeSelector } from "./features/themeSwitch/themeSlice"
+import { isDarkModeSelector, toogleTheme } from "./features/themeSwitch/themeSlice"
 import { useAppDispatch, useAppSelector } from "./hooks/reduxHooks"
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <StyledGlobal />
       <StyledAppWrapper>
+        <button onClick={() => dispatch(toogleTheme())}>Toggle Theme</button>
         <HeroSection />
         <ListBlock title="My skillset includes 🛠️" content={skillList} />
         <ListBlock title="What I want to learn next 🚀" content={wantToLernList} />
