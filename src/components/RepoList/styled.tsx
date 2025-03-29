@@ -19,7 +19,7 @@ export const StyledSubtitle = styled.p`
     font-weight: 400;
     line-height: 1;
     letter-spacing: 1px;
-    color: ${({ theme }) => theme.colors.baseText};
+    color: ${({ theme }) => theme.colors.textBasic};
     margin: 8px 0 24px 0;
 `
 
