@@ -8,11 +8,12 @@ const StyledGlobal = createGlobalStyle`
 
     *, ::before, ::after {
         box-sizing: inherit;
+        transition: all 0.5s ease-in;
     }
 
     body{
         background: ${({ theme }) => theme.colors.mainBg};
-        transition: background 0.5s ease-in;
+        /* transition: background 0.5s ease-in; */
     }
 `
 
