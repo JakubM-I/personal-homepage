@@ -12,6 +12,7 @@ const StyledGlobal = createGlobalStyle`
 
     body{
         background: ${({ theme }) => theme.colors.mainBg};
+        transition: background 0.5s ease-in;
     }
 `
 
