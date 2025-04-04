@@ -26,7 +26,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <StyledGlobal />
       <StyledAppWrapper>
-        <button onClick={() => dispatch(toogleTheme())}>Toggle Theme</button>
+
         <HeroSection />
         <ListBlock title="My skillset includes 🛠️" content={skillList} />
         <ListBlock title="What I want to learn next 🚀" content={wantToLernList} />

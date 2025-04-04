@@ -1,10 +1,15 @@
 import { StyledIntroText } from "../../common/styled/styled";
+import { isDarkModeSelector, toogleTheme } from "../../features/themeSwitch/themeSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { StyledButton, StyledHeroDescription, StyledHeroImage, StyledHeroSection, StyledHeroTitle } from "./styled";
 
 const HeroSection: React.FC = () => {
+    const dispatch = useAppDispatch();
+
 
     return (
         <StyledHeroSection>
+            <button onClick={() => dispatch(toogleTheme())}>Toggle Theme</button>
             <StyledHeroImage src="" alt="" />
             <div>
                 <StyledIntroText>This is</StyledIntroText>
