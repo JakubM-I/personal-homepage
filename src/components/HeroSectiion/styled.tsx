@@ -9,6 +9,13 @@ export const StyledHeroSection = styled.div`
     align-items: center;
     margin-block-start: 89px;
     margin-block-end: 72px;
+    position: relative;
+`
+
+export const StyledThemeButton = styled.button`
+    position: absolute;
+    top: 0;
+    right: 0;
 `
 
 export const StyledHeroImage = styled.img`
