@@ -17,14 +17,16 @@ const RepoList: React.FC = () => {
             <BlockTitle title="Portfolio" />
             <StyledSubtitle>My recent projects</StyledSubtitle>
             <StyledRepoList>
-                {repos.map(repo => (
-                    <StyledRepoItem key={repo.id}>
-                        <StyledRepoTitle>{repo.name}</StyledRepoTitle>
-                        <StyledRepoDescription>{repo.description}</StyledRepoDescription>
-                        <StyledRepoDescription>Demo: <StyledRepoLink href={repo.homepage} target="_blank">{repo.homepage}</StyledRepoLink></StyledRepoDescription>
-                        <StyledRepoDescription>Code: <StyledRepoLink href={repo.html_url} target="_blank">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
-                    </StyledRepoItem>
-                ))}
+                {repos
+                    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+                    .map(repo => (
+                        <StyledRepoItem key={repo.id}>
+                            <StyledRepoTitle>{repo.name}</StyledRepoTitle>
+                            <StyledRepoDescription>{repo.description}</StyledRepoDescription>
+                            <StyledRepoDescription>Demo: <StyledRepoLink href={repo.homepage} target="_blank">{repo.homepage}</StyledRepoLink></StyledRepoDescription>
+                            <StyledRepoDescription>Code: <StyledRepoLink href={repo.html_url} target="_blank">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
+                        </StyledRepoItem>
+                    ))}
                 {/* <StyledRepoItem>
                     <StyledRepoTitle>Movies Browser</StyledRepoTitle>
                     <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
