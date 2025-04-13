@@ -12,10 +12,23 @@ export const StyledHeroSection = styled.div`
     position: relative;
 `
 
-export const StyledThemeButton = styled.button`
+export const StyledButtomWrapper = styled.div`
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    `
+
+export const StyledThemeButton = styled.button`
+    appearance: none;
+    width: 47px;
+    height: 25px;
+    border: 1px solid ${({ theme }) => theme.colors.themeBtnBorder};
+    border-radius: 13px;
+    cursor: pointer;
 `
 
 export const StyledHeroImage = styled.img`

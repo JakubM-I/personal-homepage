@@ -12,6 +12,7 @@ declare module "styled-components" {
             buttonTxt: string;
             borders: string
             shadow: string;
+            themeBtnBorder: string;
         };
     }
 }

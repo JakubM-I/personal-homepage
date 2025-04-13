@@ -1,15 +1,20 @@
 import { StyledIntroText } from "../../common/styled/styled";
 import { isDarkModeSelector, toogleTheme } from "../../features/themeSwitch/themeSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { StyledButton, StyledHeroDescription, StyledHeroImage, StyledHeroSection, StyledHeroTitle, StyledThemeButton } from "./styled";
+import { StyledButtomWrapper, StyledButton, StyledHeroDescription, StyledHeroImage, StyledHeroSection, StyledHeroTitle, StyledThemeButton } from "./styled";
 
 const HeroSection: React.FC = () => {
     const dispatch = useAppDispatch();
+    const isDarkMode = useAppSelector(isDarkModeSelector);
 
 
     return (
         <StyledHeroSection>
-            <StyledThemeButton onClick={() => dispatch(toogleTheme())}>Toggle Theme</StyledThemeButton>
+            <StyledButtomWrapper>
+                <span>Dark mode {isDarkMode ? "on" : "off"}</span>
+                <StyledThemeButton onClick={() => dispatch(toogleTheme())}>Toggle Theme</StyledThemeButton>
+            </StyledButtomWrapper>
+
             <StyledHeroImage src="" alt="" />
             <div>
                 <StyledIntroText>This is</StyledIntroText>
