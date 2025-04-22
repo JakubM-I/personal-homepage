@@ -28,8 +28,8 @@ export const StyledThemeSwitchTxt = styled.span`
 
 export const StyledThemeButton = styled.button`
     appearance: none;
-    width: 47px;
-    height: 25px;
+    width: 48px;
+    height: 26px;
     border: 1px solid ${({ theme }) => theme.colors.themeBtnBorder};
     background: ${({theme}) => theme.colors.themeBtnBackground};
     border-radius: 13px;
