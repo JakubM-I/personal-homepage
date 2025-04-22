@@ -13,6 +13,9 @@ declare module "styled-components" {
             borders: string
             shadow: string;
             themeBtnBorder: string;
+            themeBtnBackground: string;
+            themeBtnSwitcher: string;
+            themeBtnSwitcherIcon: string;
         };
     }
 }

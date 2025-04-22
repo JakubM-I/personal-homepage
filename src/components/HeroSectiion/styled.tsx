@@ -31,8 +31,21 @@ export const StyledThemeButton = styled.button`
     width: 47px;
     height: 25px;
     border: 1px solid ${({ theme }) => theme.colors.themeBtnBorder};
+    background: ${({theme}) => theme.colors.themeBtnBackground};
     border-radius: 13px;
+    padding-inline: 3px;
     cursor: pointer;
+`
+
+export const StyledThemeSwitcher = styled.span`
+    display: flex;
+    border-radius: 50%;
+    background: ${({theme}) => theme.colors.themeBtnSwitcher};  
+    color: ${({theme}) => theme.colors.themeBtnSwitcherIcon};
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
 `
 
 export const StyledHeroImage = styled.img`

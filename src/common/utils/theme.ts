@@ -26,7 +26,10 @@ export const lightTheme: Theme = {
         buttonTxt: colors.white,
         borders: colors.bgNeutral,
         shadow: colors.anakiwa,
-        themeBtnBorder: colors.darkGrey
+        themeBtnBorder: colors.darkGrey,
+        themeBtnBackground: colors.lightGrey,
+        themeBtnSwitcher: colors.darkGrey,
+        themeBtnSwitcherIcon: colors.white
     }
 };
 
@@ -41,6 +44,9 @@ export const darkTheme: Theme = {
         buttonTxt: colors.white,
         borders: colors.semiGrey,
         shadow: colors.shipCove,
-        themeBtnBorder: colors.darkGrey
+        themeBtnBorder: colors.darkGrey,
+        themeBtnBackground: colors.semiDark,
+        themeBtnSwitcher: colors.white,
+        themeBtnSwitcherIcon: colors.black
     }
 };
