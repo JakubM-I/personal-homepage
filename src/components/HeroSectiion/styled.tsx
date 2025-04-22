@@ -9,18 +9,22 @@ export const StyledHeroSection = styled.div`
     align-items: center;
     margin-block-start: 89px;
     margin-block-end: 72px;
-    position: relative;
 `
 
 export const StyledButtomWrapper = styled.div`
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
-    `
+`
+
+export const StyledThemeSwitchTxt = styled.span`
+    display: block;
+    color: ${({theme}) => theme.colors.textSecondary};
+`
 
 export const StyledThemeButton = styled.button`
     appearance: none;
