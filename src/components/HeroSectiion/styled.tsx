@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { ThemeSwitcherProps } from "../../common/interfaces/interfaces";
 
 export const StyledHeroSection = styled.div`
     width: 100%;
@@ -37,7 +38,7 @@ export const StyledThemeButton = styled.button`
     cursor: pointer;
 `
 
-export const StyledThemeSwitcher = styled.span`
+export const StyledThemeSwitcher = styled.span<ThemeSwitcherProps>`
     display: flex;
     border-radius: 50%;
     background: ${({theme}) => theme.colors.themeBtnSwitcher};  
