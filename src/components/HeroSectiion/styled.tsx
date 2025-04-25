@@ -10,6 +10,13 @@ export const StyledHeroSection = styled.div`
     align-items: center;
     margin-block-start: 89px;
     margin-block-end: 72px;
+
+    @media (width <= 425px){
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 `
 
 export const StyledButtomWrapper = styled.div`
@@ -25,6 +32,10 @@ export const StyledButtomWrapper = styled.div`
 export const StyledThemeSwitchTxt = styled.span`
     display: block;
     color: ${({theme}) => theme.colors.textSecondary};
+
+    @media (width <= 425px){
+        display: none;
+    }
 `
 
 export const StyledThemeButton = styled.button`
@@ -57,6 +68,10 @@ export const StyledHeroImage = styled.img`
     width: min(100%, 398px);
     height: auto;
     aspect-ratio: 1/1;
+
+    @media (width <= 425px){
+        width: min(100%, 133px);
+    }
 `
 
 export const StyledHeroContent = styled.div`
