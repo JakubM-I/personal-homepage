@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledHeroSection = styled.div`
     width: 100%;
@@ -46,6 +46,10 @@ export const StyledThemeSwitcher = styled.span`
     height: 20px;
     justify-content: center;
     align-items: center;
+
+    ${({dark}) => dark && css`
+        transform: translateX(19px);
+    `}
 `
 
 export const StyledHeroImage = styled.img`
