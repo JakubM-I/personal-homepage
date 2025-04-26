@@ -11,11 +11,21 @@ export const StyledHeroSection = styled.div`
     margin-block-start: 89px;
     margin-block-end: 72px;
 
+    @media (width < 1024px){
+        gap: clamp(1.875rem, 0.005rem + 7.0234vw, 4.5rem);
+        margin-block-start: clamp(1.25rem, -1.8098rem + 11.5192vw, 5.5625rem);
+    }
+
+    @media (width < 768px){
+        padding-block-start: clamp(0rem, 4.9123rem + -10.2339vw, 2.1875rem);
+    }
+
     @media (width <= 425px){
         flex-direction: column;
         gap: 14px;
         align-items: flex-start;
         justify-content: flex-start;
+        padding-block-start: 0;
     }
 `
 
@@ -31,6 +41,7 @@ export const StyledButtomWrapper = styled.div`
 
 export const StyledThemeSwitchTxt = styled.span`
     display: block;
+    font-size: 12px;
     color: ${({theme}) => theme.colors.textSecondary};
 
     @media (width <= 425px){
@@ -86,6 +97,10 @@ export const StyledHeroTitle = styled.h1`
     line-height: 1;
     letter-spacing: 2px;
     color: ${({ theme }) => theme.colors.textBasic};
+
+    @media (width < 1024px){
+        font-size: clamp(1.375rem, 1.0909rem + 1.4205vw, 2rem);
+    }
 `
 
 export const StyledHeroDescription = styled.p`
@@ -95,6 +110,10 @@ export const StyledHeroDescription = styled.p`
     line-height: 1.4;
     letter-spacing: 2px;
     color: ${({ theme }) => theme.colors.textSecondary};
+
+    @media (width < 1024px){
+        font-size: clamp(1.0625rem, 0.9773rem + 0.4261vw, 1.25rem);
+    }
 `
 
 export const StyledButton = styled.button`
@@ -119,5 +138,9 @@ export const StyledButton = styled.button`
         2px 2px 0px 0px ${({ theme }) => theme.colors.shadow}, 
         -2px 2px 0px 0px ${({ theme }) => theme.colors.shadow}, 
         2px -2px 0px 0px ${({ theme }) => theme.colors.shadow};
+    }
+
+    @media (width < 1024px){
+        font-size: clamp(1.125rem, 1.0682rem + 0.2841vw, 1.25rem);
     }
 `

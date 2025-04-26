@@ -1,5 +1,6 @@
 export const skillList: string[] = [
     "Responsive Web Design",
+    "CSS Modules",
     "CSS Grid",
     "CSS Flexbox",
     "Tailwind CSS",
