@@ -8,4 +8,8 @@ export const StyledTitle = styled.h2`
     letter-spacing: 2px;
     margin: 0;
     color: ${({ theme }) => theme.colors.textBasic};
+
+    @media (width < 1024px){
+        font-size: clamp(1.125rem, 0.7841rem + 1.7045vw, 1.875rem);
+    }
 `
