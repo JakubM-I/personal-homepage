@@ -10,6 +10,7 @@ export const StyledListBlock = styled.div`
 
     @media (width < 1024px){
         padding: clamp(1rem, 0.5455rem + 2.2727vw, 2rem);
+        margin-block-end: clamp(3.125rem, 2.5rem + 3.125vw, 4.5rem);
     }
 
 `
@@ -22,7 +23,6 @@ export const StyledDivider = styled.hr`
         margin-block-end: clamp(0.75rem, 0.1818rem + 2.8409vw, 2rem);
     }
 `
-
 
 export const StyledList = styled.ul`
     padding: 0;
