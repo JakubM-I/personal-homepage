@@ -8,12 +8,12 @@ export const StyledHeroSection = styled.div`
     gap: 72px;
     justify-content: flex-start;
     align-items: center;
-    margin-block-start: 89px;
+    /* margin-block-start: 89px; */
     margin-block-end: 72px;
 
     @media (width < 1024px){
         gap: clamp(1.875rem, 0.005rem + 7.0234vw, 4.5rem);
-        margin-block-start: clamp(1.25rem, -1.8098rem + 11.5192vw, 5.5625rem);
+        /* margin-block-start: clamp(1.25rem, -1.8098rem + 11.5192vw, 5.5625rem); */
     }
 
     @media (width < 768px){
