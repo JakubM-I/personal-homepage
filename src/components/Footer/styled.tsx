@@ -61,6 +61,7 @@ export const StyledLogoWrapper = styled.div`
 
     @media (width < 1024px){
         margin-block-start: clamp(2.5rem, 2.0455rem + 2.2727vw, 3.5rem);
+        gap: clamp(1rem, 0.7727rem + 1.1364vw, 1.5rem);
     }
 `
 
@@ -72,5 +73,11 @@ export const StyledLink = styled.a`
 
     &:hover {
         color: ${({ theme }) => theme.colors.mainBlue};
+    }
+`
+
+export const StyledSvg = styled.svg`
+    @media (width < 1024px){
+        width: clamp(2rem, 1.5455rem + 2.2727vw, 3rem);
     }
 `
