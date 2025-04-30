@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import BlockTitle from "../../common/BlockTitle"
-import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoList, StyledRepoTitle, StyledSubtitle, StyledSvg } from "./styled";
+import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoList, StyledRepoTitle, StyledSvg } from "./styled";
 import { reposSelector, reposWithHomePageSelector } from "../../features/repoList/repoSlice";
+import { StyledSubtitle } from "../../common/styled/styled";
 
 const RepoList: React.FC = () => {
     const repos = useSelector(reposWithHomePageSelector);
