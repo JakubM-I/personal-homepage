@@ -1,11 +1,13 @@
-import { useSelector } from "react-redux";
 import BlockTitle from "../../common/BlockTitle"
 import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoList, StyledRepoTitle, StyledSvg } from "./styled";
-import { reposSelector, reposWithHomePageSelector } from "../../features/repoList/repoSlice";
+import { isLoadingSelector, reposWithHomePageSelector } from "../../features/repoList/repoSlice";
 import { StyledSubtitle } from "../../common/styled/styled";
+import { useAppSelector } from "../../hooks/reduxHooks";
+import Loading from "../Loading";
 
 const RepoList: React.FC = () => {
-    const repos = useSelector(reposWithHomePageSelector);
+    const repos = useAppSelector(reposWithHomePageSelector);
+    const isLoading = useAppSelector(isLoadingSelector);
     console.log(repos);
 
     return (
@@ -17,10 +19,12 @@ const RepoList: React.FC = () => {
             </StyledLogoWrapper>
             <BlockTitle title="Portfolio" />
             <StyledSubtitle>My recent projects</StyledSubtitle>
-            <StyledRepoList>
-                {repos
-                    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
-                    .map(repo => (
+            {isLoading ? 
+                (<Loading/>) : 
+                (<StyledRepoList>
+                    {repos
+                        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+                        .map(repo => (
                         <StyledRepoItem key={repo.id}>
                             <StyledRepoTitle>{repo.name}</StyledRepoTitle>
                             <StyledRepoDescription>{repo.description}</StyledRepoDescription>
@@ -28,31 +32,8 @@ const RepoList: React.FC = () => {
                             <StyledRepoDescription>Code: <StyledRepoLink href={repo.html_url} target="_blank">{repo.html_url}</StyledRepoLink></StyledRepoDescription>
                         </StyledRepoItem>
                     ))}
-                {/* <StyledRepoItem>
-                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
-                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
-                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
-                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
-                </StyledRepoItem>
-                <StyledRepoItem>
-                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
-                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
-                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
-                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
-                </StyledRepoItem>
-                <StyledRepoItem>
-                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
-                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
-                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
-                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
-                </StyledRepoItem>
-                <StyledRepoItem>
-                    <StyledRepoTitle>Movies Browser</StyledRepoTitle>
-                    <StyledRepoDescription>Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.</StyledRepoDescription>
-                    <StyledRepoDescription>Demo: <StyledRepoLink href="#">http://link.demo.com</StyledRepoLink></StyledRepoDescription>
-                    <StyledRepoDescription>Code: <StyledRepoLink href="#">http://link.code.com</StyledRepoLink></StyledRepoDescription>
-                </StyledRepoItem> */}
-            </StyledRepoList>
+                </StyledRepoList>
+            )}
         </StyledPortfolio>
     )
 };

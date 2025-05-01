@@ -31,6 +31,7 @@ const repoSlice = createSlice({
 export const repoStateSelector = (state: RootState) => state.repos;
 export const reposSelector = (state: RootState) => repoStateSelector(state).repos;
 export const reposWithHomePageSelector = (state: RootState) => repoStateSelector(state).repos.filter(repo => repo.homepage !== null);
+export const isLoadingSelector = (state: RootState) => repoStateSelector(state).isLoading;
 
 export const { loadRepos, setRepos } = repoSlice.actions;
 export default repoSlice.reducer;
