@@ -1,7 +1,13 @@
-import { takeEvery } from "redux-saga/effects";
-import { toogleTheme } from "./themeSlice";
+import { call, select, takeEvery } from "redux-saga/effects";
+import { isDarkModeSelector, toogleTheme } from "./themeSlice";
+import { useAppSelector } from "../../hooks/reduxHooks";
+import { saveToLocalStorage } from "../../common/utils/localStorage";
+import { SavedThemeProps } from "../../common/interfaces/interfaces";
 
 function* LocalStorageWorker () {
+    const darkMode: boolean = yield select(isDarkModeSelector);
+
+    yield call(saveToLocalStorage, darkMode)
 
 };
 

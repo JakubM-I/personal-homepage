@@ -6,3 +6,7 @@ export interface ListBlockProps {
 export interface ThemeSwitcherProps {
     dark?: boolean;
 }
+
+export interface SavedThemeProps {
+    darkMode: boolean | undefined;
+}

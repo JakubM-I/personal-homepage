@@ -1,12 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
+import { loadFromLocalStorage } from "../../common/utils/localStorage";
+import { SavedThemeProps } from "../../common/interfaces/interfaces";
 
 interface ThemeState {
     isDarkMode: boolean;
 }
 
+const savedTheme: SavedThemeProps = loadFromLocalStorage();
+
 const initialState: ThemeState = {
-    isDarkMode: false,
+    isDarkMode: savedTheme?.darkMode || false,
 };
 
 const themeSlice = createSlice({
