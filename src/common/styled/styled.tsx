@@ -21,3 +21,17 @@ export const StyledSubtitle = styled.p`
         font-size: clamp(1.0625rem, 0.9773rem + 0.4261vw, 1.25rem);
     }
 `
+
+export const StyledInfoBlock = styled.div`
+    width: 100%;
+    padding-block: 88px 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (width < 1024px){
+        padding-block: clamp(3rem, 1.8636rem + 5.6818vw, 5.5rem)
+        clamp(1.25rem, 0.1136rem + 5.6818vw, 3.75rem);
+    }
+`
