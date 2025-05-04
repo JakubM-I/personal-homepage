@@ -1,13 +1,15 @@
 import BlockTitle from "../../common/BlockTitle"
 import { StyledLogoWrapper, StyledPortfolio, StyledRepoDescription, StyledRepoItem, StyledRepoLink, StyledRepoList, StyledRepoTitle, StyledSvg } from "./styled";
-import { isLoadingSelector, reposWithHomePageSelector } from "../../features/repoList/repoSlice";
+import { isErrorSelector, isLoadingSelector, reposWithHomePageSelector } from "../../features/repoList/repoSlice";
 import { StyledSubtitle } from "../../common/styled/styled";
 import { useAppSelector } from "../../hooks/reduxHooks";
 import Loading from "../Loading";
+import Error from "../Error";
 
 const RepoList: React.FC = () => {
     const repos = useAppSelector(reposWithHomePageSelector);
     const isLoading = useAppSelector(isLoadingSelector);
+    const isError = useAppSelector(isErrorSelector);
     console.log(repos);
 
     return (
@@ -21,7 +23,8 @@ const RepoList: React.FC = () => {
             <StyledSubtitle>My recent projects</StyledSubtitle>
             {isLoading ? 
                 (<Loading/>) : 
-                (<StyledRepoList>
+                isError ? (<Error />) : (
+                    <StyledRepoList>
                     {repos
                         .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
                         .map(repo => (
@@ -33,7 +36,8 @@ const RepoList: React.FC = () => {
                         </StyledRepoItem>
                     ))}
                 </StyledRepoList>
-            )}
+                )
+            }
         </StyledPortfolio>
     )
 };
