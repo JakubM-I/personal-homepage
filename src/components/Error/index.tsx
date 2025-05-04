@@ -1,7 +1,15 @@
 
+import { cancelError } from "../../features/repoList/repoSlice";
+import { useAppDispatch } from "../../hooks/reduxHooks";
 import { StyledError, StyledErrorInfo } from "./styled";
 
-const Error = () => {
+const Error: React.FC = () => {
+
+    const dispatch = useAppDispatch();
+    const handleError = () => {
+        dispatch(cancelError());
+    }
+
     return (
         <StyledError>
             <div>
@@ -16,6 +24,9 @@ const Error = () => {
             Sorry, failed to load Github projects.<br />
             You can check them directly on Github.
             </StyledErrorInfo>
+            <button onClick={handleError}> 
+                Try Again
+            </button>
 
         </StyledError>
     )

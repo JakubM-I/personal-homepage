@@ -1,6 +1,6 @@
 import { call, delay, put, takeEvery } from "redux-saga/effects";
 import { getRepoList } from "../../common/utils/getRepoList";
-import { loadRepos, setRepos } from "./repoSlice";
+import { loadError, loadRepos, setRepos } from "./repoSlice";
 
 function* fetchReposWorker() {
     try {
@@ -14,5 +14,6 @@ function* fetchReposWorker() {
 }
 
 export function* repoSaga() {
+    yield put(loadError());
     yield takeEvery(loadRepos.type, fetchReposWorker);
 }
