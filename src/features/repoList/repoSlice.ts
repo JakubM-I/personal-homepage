@@ -40,7 +40,15 @@ const repoSlice = createSlice({
 
 export const repoStateSelector = (state: RootState) => state.repos;
 export const reposSelector = (state: RootState) => repoStateSelector(state).repos;
-export const reposWithHomePageSelector = (state: RootState) => repoStateSelector(state).repos.filter(repo => repo.homepage !== null);
+export const reposWithHomePageSelector = (state: RootState) => {
+    if(Array.isArray(reposSelector(state))) {
+        return reposSelector(state).filter(repo => repo.homepage !== null);
+    } else {
+        return [];
+    }
+}
+    
+    // repoStateSelector(state).repos.filter(repo => repo.homepage !== null);
 export const isLoadingSelector = (state: RootState) => repoStateSelector(state).isLoading;
 export const isErrorSelector = (state: RootState) => repoStateSelector(state).isError;
 

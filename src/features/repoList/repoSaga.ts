@@ -9,11 +9,11 @@ function* fetchReposWorker() {
         yield put(setRepos(repos));
 
     } catch (error) {
+        yield put(loadError());
         console.log(error);
     }
 }
 
 export function* repoSaga() {
-    yield put(loadError());
     yield takeEvery(loadRepos.type, fetchReposWorker);
 }
