@@ -1,7 +1,7 @@
-import { StyledIntroText } from "../../common/styled/styled";
+import { StyledButton, StyledIntroText } from "../../common/styled/styled";
 import { isDarkModeSelector, toogleTheme } from "../../features/themeSwitch/themeSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { StyledButtomWrapper, StyledButton, StyledHeroDescription, StyledHeroImage, StyledHeroSection, StyledHeroTitle, StyledThemeButton, StyledThemeSwitcher, StyledThemeSwitchTxt } from "./styled";
+import { StyledButtomWrapper, StyledHeroDescription, StyledHeroImage, StyledHeroSection, StyledHeroTitle, StyledThemeButton, StyledThemeSwitcher, StyledThemeSwitchTxt } from "./styled";
 
 const HeroSection: React.FC = () => {
     const dispatch = useAppDispatch();

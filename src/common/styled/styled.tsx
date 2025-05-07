@@ -35,3 +35,32 @@ export const StyledInfoBlock = styled.div`
         clamp(1.25rem, 0.1136rem + 5.6818vw, 3.75rem);
     }
 `
+
+export const StyledButton = styled.button`
+    appearance: none;
+    border: 1px solid ${({ theme }) => theme.colors.borders};
+    border-radius: 4px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: ${({ theme }) => theme.colors.mainBlue};
+    color: ${({ theme }) => theme.colors.buttonTxt};
+    transition: box-shadow 350ms ease-in, background 0.5s ease-in;
+
+    &:hover {
+        box-shadow: -2px -2px 0px 0px ${({ theme }) => theme.colors.shadow}, 
+        2px 2px 0px 0px ${({ theme }) => theme.colors.shadow}, 
+        -2px 2px 0px 0px ${({ theme }) => theme.colors.shadow}, 
+        2px -2px 0px 0px ${({ theme }) => theme.colors.shadow};
+    }
+
+    @media (width < 1024px){
+        font-size: clamp(1.125rem, 1.0682rem + 0.2841vw, 1.25rem);
+    }
+`
