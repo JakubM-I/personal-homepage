@@ -1,6 +1,6 @@
 export const getRepoList = async () => {
     try{
-        const response = await fetch("https://api.github.com/users/JakubM-I/repos");
+        const response = await fetch("https://api.github.com/users/JakubM-I/repos2");
         if(!response.ok){
             throw new Error(response.statusText);
         }
