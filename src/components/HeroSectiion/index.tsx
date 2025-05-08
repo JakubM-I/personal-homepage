@@ -41,7 +41,11 @@ const HeroSection: React.FC = () => {
                 <StyledIntroText>This is</StyledIntroText>
                 <StyledHeroTitle>Jakub Musiałowski</StyledHeroTitle>
                 <StyledHeroDescription>I'm a Frontend Developer and i will do page for you :)</StyledHeroDescription>
-                <StyledButton><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <StyledButton 
+                    onClick={() => window.location.href = "mailto:mds@mds.biz.pl"}
+                    title="I invite you to contact me"
+                    >
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.2676 9.56116L13.0022 12.9954C12.1949 13.6283 11.0634 13.6283 10.2562 12.9954L5.9541 9.56116" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path fillRule="evenodd" clipRule="evenodd" d="M6.88787 4H16.3158C17.6752 4.01525 18.969 4.58993 19.896 5.5902C20.823 6.59048 21.3022 7.92903 21.222 9.29412V15.822C21.3022 17.1871 20.823 18.5256 19.896 19.5259C18.969 20.5262 17.6752 21.1009 16.3158 21.1161H6.88787C3.96796 21.1161 2 18.7407 2 15.822V9.29412C2 6.37545 3.96796 4 6.88787 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
